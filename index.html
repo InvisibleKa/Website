@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #0f0;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #111;
+  border: 1px solid #0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+h1 {
+  color: #0f0;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  font-size: 13px;
+  border: 2px solid #0f0;
+  border-radius: 4px;
+  line-height: 1.5;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #0f0;
+  background: #000;
+  display: block;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0f0;
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #060;
+}
+
+p {
+  margin-top: 15px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+span {
+  font-style: italic;
+}
+
+.loader {
+  border: 6px solid #0f0;
+  border-top: 6px solid #000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  position: relative; /* For centering */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome!</h1>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+
+  <button onclick="login()">Login</button>
+
+  <div id="loader-container" style="display: none;">
+    <div class="loader"></div>
+  </div>
+</div>
+
+<script>
+function login() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var encodedCredentials = btoa(username + ':' + password);
+
+  if (encodedCredentials === 'YWRtaW46cGFzc3dvcmQ=') {
+    document.getElementById('loader-container').style.display = 'flex';
+
+    var clickTime = Date.now();
+    setTimeout(function() {
+      window.location.href = 'Loading\loading.html'; // Redirect after a delay
+    }, 2000); // Adjust the delay time as needed (3 seconds in this example)
+  } else {
+    alert('Incorrect username or password. Try again.');
+  }
+}
+</script>
+
+</body>
+</html>
