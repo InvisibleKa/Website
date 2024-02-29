@@ -1,0 +1,49 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #1f1f1f; /* Dark background */
+    color: #00ff00; /* Bright green text */
+    text-align: center;
+    background-image: url('istockphoto-1010690668-1024x1024_1709108132326.jpg');
+    background-size: cover;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    background-color: #1f1f1f;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    outline: none;
+}
+
+.custom {
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2b5797; /* Dark blue */
+    color: #00ff00;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #004495; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    input[type="text"],
+    .custom,
+    button {
+        padding: 8px;
+        margin: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
