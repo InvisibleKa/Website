@@ -1,3 +1,8 @@
+// script.js
+
+document.getElementById("encryptButton").addEventListener("click", encryptMessage);
+document.getElementById("decryptButton").addEventListener("click", decryptMessage);
+
 function encryptMessage() {
     const message = document.getElementById("message").value;
     const password = document.getElementById("password").value;
@@ -21,11 +26,12 @@ function decryptMessage() {
         try {
             const decrypted = CryptoJS.AES.decrypt(encryptedMessage, password).toString(CryptoJS.enc.Utf8);
             
-            if(decrypted)
+            if (decrypted)
                 document.getElementById("decryptedMessage").textContent = decrypted;
             else
                 document.getElementById("decryptedMessage").textContent = "Wrong password!";
-        } catch(err) {
+        } catch (err) {
+            console.error("Decryption error:", err);
             document.getElementById("decryptedMessage").textContent = "Wrong password!";
         }
     } else {
