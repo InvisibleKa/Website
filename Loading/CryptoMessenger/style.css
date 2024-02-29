@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  /* Glassmorphism effect */
+  backdrop-filter: blur(5px) saturate(150%); /* Adjusts color saturation */
+  background-image: url('istockphoto-1279388417-1024x1024 (1).jpg'); /* Replace with the actual image path */
+  background-size: cover; /* Covers the entire background area */
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px); /* Remains the same */
+}
+
+h1 {
+  color: #0f0;
+  text-align: center;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+button {
+  background-color: #45444d;
+  color: #0f0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0f0;
+  color: #45444d;
+
+}
+
+p {
+  margin-top: 15px;
+  color: #0f0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+span {
+  font-style: italic;
+}

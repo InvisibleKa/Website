@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AES-256 Encryption & Decryption</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryptor & Decryptor</h1>
+        
+        <label for="message"><p>Enter your message:</p></label>
+        <input type="text" id="message" placeholder="Enter your message...">
+        
+        <label for="password"><p>Enter your password:</p></label>
+        <input type="password" id="password" placeholder="Enter universal password...">
+        
+        <button onclick="encryptMessage()">Encrypt</button>
+        <button onclick="decryptMessage()">Decrypt</button>
+        
+        <p><strong>Encrypted Message:</strong> <span id="encryptedMessage"></span></p>
+        <p><strong>Decrypted Message:</strong> <span id="decryptedMessage"></span></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
