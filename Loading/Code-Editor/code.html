@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Code Editor</title>
+  <link rel="icon" type="image/x-icon" href="icons8-code-48.png">
+  <link rel="stylesheet" href="code.css" />
+   <script src="https://kit.fontawesome.com/f2b1815f5e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header-wrap">
+    <h1>Online Code Editor</h1>
+    <h4>Compile HTML, CSS and JavaScript on the web</h4>
+  </div>
+  <div id="ide-parent">
+    <div id="button-wrapper">
+      <button onclick="switchPanel(0)"><i class="fa-brands fa-html5" style="color: #e34c26;"></i> HTML</button>
+      <button onclick="switchPanel(1)"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS</button>
+      <button onclick="switchPanel(2)"><i class="fa-brands fa-js" style="color: #f0db4f;"></i> JAVASCRIPT</button>
+      <button onclick="runEdit(3)"><i class="fa-solid fa-play" style="color: #63E6BE;"></i> Result</button>
+    </div>
+    <div id="ide-container">
+      <div class="panel-wrapper">
+        <div id="html">         
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;body&gt;
+   
+&lt;/body&gt;
+&lt;/head&gt;
+&lt;/html&gt;
+
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="css">
+<!--/*predefined CSS, but editable*/
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: crimson;
+	margin: auto;
+	margin-top: 50px;
+	transition-duration: 300ms;
+}-->
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <div id="js">
+<!--//predefined JavaScript, but editable
+
+var circle = document.querySelector(".circle");
+var bool = false;
+
+circle.addEventListener('click', function() {
+	if (!bool) {
+		circle.style.background = "coral";
+		bool = true;
+	} else {
+		circle.style.background = "crimson";
+		bool = false;
+	}
+});-->
+        </div>
+      </div>
+      <div class="panel-wrapper">
+        <iframe id="result"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <p>This code editor uses Ace for syntax highlighting and other text
+      editing features. Addition or changes to
+      the code is compiled on the fly when the result tab is clicked.</p>
+	 
+  
+	
+  </div>
+  <div class="footer">
+    <div class="inner-wrap">
+      <p>&#169; <span></span> abc💕💖</p>
+      <div class="icons-wrap">
+       
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="code.js"></script>
+</body>
+</html>
